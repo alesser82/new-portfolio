@@ -1,0 +1,395 @@
+/* Root */
+.text-light {
+    color: rgba(255, 255, 255, .75) !important;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .75);
+}
+
+/* Loader */
+#loader {
+    z-index: 3000;
+    background-color: black;
+    font-size: 27px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+#loader p::after {
+    content: ' .';
+    -webkit-animation: dots 1s steps(5, end) infinite;
+    -moz-animation: dots 1s steps(5, end) infinite;
+    -o-animation: dots 1s steps(5, end) infinite;
+    animation: dots 1s steps(5, end) infinite;
+}
+
+#loader.d-none p::after {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes dots {
+
+    0%,
+    20% {
+        color: rgba(0, 0, 0, 0);
+        text-shadow:
+            .5em 0 0 rgba(0, 0, 0, 0),
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    40% {
+        color: white;
+        text-shadow:
+            .5em 0 0 rgba(0, 0, 0, 0),
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    60% {
+        text-shadow:
+            .5em 0 0 white,
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    80%,
+    100% {
+        text-shadow:
+            .5em 0 0 white,
+            1em 0 0 white;
+    }
+}
+
+@-moz-keyframes dots {
+
+    0%,
+    20% {
+        color: rgba(0, 0, 0, 0);
+        text-shadow:
+            .5em 0 0 rgba(0, 0, 0, 0),
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    40% {
+        color: white;
+        text-shadow:
+            .5em 0 0 rgba(0, 0, 0, 0),
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    60% {
+        text-shadow:
+            .5em 0 0 white,
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    80%,
+    100% {
+        text-shadow:
+            .5em 0 0 white,
+            1em 0 0 white;
+    }
+}
+
+@-o-keyframes dots {
+
+    0%,
+    20% {
+        color: rgba(0, 0, 0, 0);
+        text-shadow:
+            .5em 0 0 rgba(0, 0, 0, 0),
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    40% {
+        color: white;
+        text-shadow:
+            .5em 0 0 rgba(0, 0, 0, 0),
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    60% {
+        text-shadow:
+            .5em 0 0 white,
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    80%,
+    100% {
+        text-shadow:
+            .5em 0 0 white,
+            1em 0 0 white;
+    }
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        color: rgba(0, 0, 0, 0);
+        text-shadow:
+            .5em 0 0 rgba(0, 0, 0, 0),
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    40% {
+        color: white;
+        text-shadow:
+            .5em 0 0 rgba(0, 0, 0, 0),
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    60% {
+        text-shadow:
+            .5em 0 0 white,
+            1em 0 0 rgba(0, 0, 0, 0);
+    }
+
+    80%,
+    100% {
+        text-shadow:
+            .5em 0 0 white,
+            1em 0 0 white;
+    }
+}
+
+/* Menu Style */
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    right: 100px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-right: 105px;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle.active span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle.active span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle.active span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    margin: -50px 0 0 -50px;
+    left: 0;
+    top: 0;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    /* transform: translate(-100%, 0); */
+    transform: translate(0, -100%);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 2em;
+    font-family: 'Montserrat', 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+/* #menuToggle.active ul {
+    transform: none;
+} */
+
+#menuToggle.active ul {
+    transform: none;
+}
+
+#menu li::before,
+#menu li::after {
+    content: '';
+    min-width: 0%;
+    min-height: 50%;
+    background-color: rgba(0, 0, 0, .1);
+    position: absolute;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+#menu li::before {
+    left: 0;
+    top: 0;
+}
+
+#menu li::after {
+    right: 0;
+    bottom: 0;
+}
+
+#menu a:hover li::before,
+#menu a:hover li::after {
+    min-width: 100%;
+}
+
+#menu a:hover li {
+    color: white;
+}
+
+#menu a.active li {
+    color: white !important;
+}
+
+
+/* Navigation Button */
+.right-button,
+.left-button {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    top: calc(50% - 60px);
+    z-index: 10;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.right-button {
+    right: -100px;
+}
+
+.left-button {
+    left: -100px;
+}
+
+body.active .right-button {
+    right: 40px;
+}
+
+body.active .left-button {
+    left: 40px;
+}
+
+.right-button button,
+.left-button button {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    font-size: 65px;
+}
+
+.right-button button:hover,
+.left-button button:hover {
+    transform: scaleY(1.5);
+}
+
+/* About Section */
+#about h5 {
+    font-size: 29px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#about p {
+    font-size: 17px;
+    font-family: 'Lato',
+    sans-serif;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+    /* Root */
+    .container {
+        max-width: 900px;
+    }
+
+    /* Menu */
+    #menu div.w-50 {
+        width: 25% !important;
+    }
+
+}

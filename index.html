@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="preload" href="./vendor/fontawesome/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="preload" as="style" onload="this.rel='stylesheet'">
+    <!-- <script src="./scripts/loading.js"></script> -->
+    <title>Web Develepor Portfolio</title>
+</head>
+<body>
+    <div class="position-fixed d-flex w-100 h-100 text-white justify-content-center align-items-center" id="loader">
+        <p class="m-0">Loading</p>
+    </div>
+    <header class="fixed-top">
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span class="ml-auto"></span>
+                <span class="ml-auto"></span>
+                <span class="ml-auto"></span>
+                <ul id="menu" class="position-absolute w-100 min-vh-100 bg-dark text-center p-0 d-flex justify-content-center align-items-center">
+                    <div class="w-50">
+                        <a href="#/" class="text-white-50 active">
+                            <li class="position-relative py-4">About</li>
+                        </a>
+                        <a href="#/portfolio" class="text-white-50">
+                            <li class="position-relative py-4">Portfolio</li>
+                        </a>
+                        <a href="#/certificate" class="text-white-50">
+                            <li class="position-relative py-4">Certificate</li>
+                        </a>
+                        <a href="#/contact" class="text-white-50">
+                            <li class="position-relative py-4">Contact</li>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="min-vw-100 min-vh-100 bg-dark d-flex align-items-center py-5">
+        <!-- <section id="about" class="container text-light py-5 text-center d-none">
+            <h5>Hello, my name is Muhammad Ramadhan.</h5>
+            <p class="m-0">I am a web developer.</p>
+            <p class="m-0">I have studied in this field for 2 years and worked for 2 years.</p>
+            <p class="m-0">Check out my <a href="#portfolio" class="text-white text-decoration-none">portfolio</a>, CodeIgniter, Laravel, Bootstrap, and others.
+            </p>
+            <p class="m-0">Services available UTC+7. muhrama082@gmail.com</p>
+        </section> -->
+    </main>
+    <div class="position-fixed right-button d-none d-lg-block">
+        <span class="text-light"></span>
+        <button type="button" class="btn text-light">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <div class="position-fixed left-button d-none d-lg-block">
+        <button type="button" class="btn text-light">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <span class="text-light"></span>
+    </div>
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script defer src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./vendor/jq-router/dist/jq-router.min.js"></script>
+    <script defer src="./scripts/script.js"></script>
+</body>
+</html>
